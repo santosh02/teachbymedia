@@ -831,7 +831,7 @@ video {
                     <h4>NEWSLETTER SIGN-UP</h4>
                     <p>SUBSCRIBE NOW TO THE TEACH BY MEDIA NEWSLETTER AND RECEIVE REGULAR NEWS AND INFORMATION ABOUT THE TEACH BY MEDIA!</p>
                 </div>
-                <form class="col-sm-7 form-inline newsletter_signup_form style2" action="https://docs.google.com/forms/d/e/1FAIpQLSep99wTq60JhDwBGTRLvrLrjL61ZrX5rtV-H05MGCMoPLluMw/formResponse" target="_self">
+                <form class="col-sm-7 form-inline newsletter_signup_form style2" onsubmit="custommsg(); return true;" action="https://docs.google.com/forms/d/e/1FAIpQLSep99wTq60JhDwBGTRLvrLrjL61ZrX5rtV-H05MGCMoPLluMw/formResponse" target="_self">
                     <input type="text" class="form-control" name="entry.76633520" placeholder="Name">
                     <input type="email" class="form-control" name="entry.1606927019" placeholder="Email Address">
                     <input type="submit" value="submit" class="btn-primary white">
@@ -960,5 +960,15 @@ video {
     <script src="js/min/theme.min.js"></script>
     <!--StyleSwitch-->
     <script src="js/styleswitch.js"></script>
+	<script type="text/javascript">
+function custommsg() {
+    document.getElementById("form-message").style.display = "";
+    document.getElementById("form-message").innerHTML = "Thank you!<br/><a href='#end'><button class='btn'>Next</button></a>";
+    document.getElementById("form-container").style.display = "none";
+            }
+</script>
+
+<div class="ss-form-container" style="display: none;" id="form-message"></div>
+<iframe src="#" id="fake-target" name="fake-target" style="width:0px; height:0px; border:0px;"></iframe>
 </body>
 </html>
