@@ -120,14 +120,14 @@ video {
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/about">Who We Are</a></li>
-                            <li><a href="/team">Team</a></li>
+                            <li id="aboutBtn"><a href="#" id="aboutBtn1">Who We Are</a></li>
+                            <li id="teamBtn"><a href="#" id="teamBtn1">Team</a></li>
                         </ul>
                     </li>
                     <li class="dropdown ">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">What We Do</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/what-we-do.html">What We Do</a></li>
+                            <li><a href="/what-we-do.html" id="whatwedoBtn">What We Do</a></li>
                             <li><a href="/fundamental-education.html">Fundamental Education</a></li>
                             <li><a href="/performing-arts.html">Performig Arts</a></li>
                             <li><a href="/prof-education.html">Professional Education</a></li>
@@ -175,7 +175,7 @@ video {
         </div>
     </nav>
     <!-- /header -->
-    
+<div id="dyn-body">    
     <!--Good Causes-->
     <section id="good_cause" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -763,6 +763,7 @@ video {
             </div>
         </div>
     </section>  -->    
+</div>
     <section class="row newsletter_signup style2">
         <div class="container">
             <div class="row">
@@ -857,6 +858,14 @@ video {
     <!--StyleSwitch-->
     <script src="js/styleswitch.js"></script>
     <script type="text/javascript">var submitted=false;</script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('#aboutBtn a').click(function(){
+            $('#dyn_body').empty();
+            $('#dyn_body').load('about1.html');
+     });
+});
+    </script>
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='/thankyou.html';}"></iframe>
 </body>
 </html>
